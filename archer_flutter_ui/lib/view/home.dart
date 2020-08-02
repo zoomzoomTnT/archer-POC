@@ -32,18 +32,18 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ]),
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'You have pushed the button this many times:',
-          ),
-          Text(
-            '$_counter',
-            style: Theme.of(context).textTheme.headline4,
-          )
-        ],
-      ),
+//      bottomNavigationBar: Row(
+//        mainAxisAlignment: MainAxisAlignment.center,
+//        children: <Widget>[
+//          Text(
+//            'You have pushed the button this many times:',
+//          ),
+//          Text(
+//            '$_counter',
+//            style: Theme.of(context).textTheme.headline4,
+//          )
+//        ],
+//      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _incrementCounter();

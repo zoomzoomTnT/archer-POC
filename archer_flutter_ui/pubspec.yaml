@@ -33,6 +33,8 @@ dependencies:
   stacked: ^1.7.5
   provider: ^4.1.3
   http: ^0.12.1
+  footer: ^0.0.3
+  font_awesome_flutter: ^8.8.1
 
 dev_dependencies:
   flutter_test:
