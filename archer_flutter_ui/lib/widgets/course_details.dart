@@ -1,4 +1,4 @@
-import 'package:archer_flutter_ui/models/season_details_model.dart';
+import 'package:archer_flutter_ui/models/datamodel/season_details_model.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -25,6 +25,7 @@ class CourseDetails extends StatelessWidget {
         return Container(
           width: 600,
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

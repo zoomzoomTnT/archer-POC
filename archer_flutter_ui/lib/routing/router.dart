@@ -1,5 +1,6 @@
 import 'package:archer_flutter_ui/view/about.dart';
 import 'package:archer_flutter_ui/view/campus.dart';
+import 'package:archer_flutter_ui/view/courses.dart';
 import 'package:archer_flutter_ui/view/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -12,6 +13,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(AboutPage(), settings.name);
     case 'campus':
       return _getPageRoute(CampusPage(), settings.name);
+    case 'courses':
+      return _getPageRoute(CoursePage(), settings.name);
     default:
   }
 }
@@ -29,8 +32,7 @@ class _FadeRoute extends PageRouteBuilder {
           BuildContext context,
           Animation<double> animation,
           Animation<double> secondaryAnimation,
-          ) =>
-      child,
+          ) => child,
       settings: RouteSettings(name: routeName),
       transitionsBuilder: (
           BuildContext context,
