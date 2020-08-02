@@ -1,5 +1,6 @@
 import 'package:archer_flutter_ui/widgets/call_to_action.dart';
 import 'package:archer_flutter_ui/widgets/course_details.dart';
+import 'package:archer_flutter_ui/widgets/page_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -20,12 +21,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: ScreenTypeLayout(
-          mobile: _HomePageMobile(),
-          desktop: _HomePageDesktop(),
-        ),
-      ),
+      body: Column(
+        children: <Widget>[
+          PageBanner(['assets/page_banner.jpeg']),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 100),
+            child: ScreenTypeLayout(
+              mobile: _HomePageMobile(),
+              desktop: _HomePageDesktop(),
+            ),
+          ),
+        ]),
       bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
