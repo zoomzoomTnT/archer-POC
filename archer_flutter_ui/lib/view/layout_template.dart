@@ -25,7 +25,7 @@ class LayoutTemplate extends StatelessWidget {
                 children: <Widget>[
                   NavigationBar(),
                   ConstrainedBox(
-                    constraints: BoxConstraints(maxHeight: 800),
+                    constraints: BoxConstraints(maxHeight: 700),
                     child: Navigator(
                       key: locator<NavigationService>().navigatorKey,
                       onGenerateRoute: generateRoute,

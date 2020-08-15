@@ -19,7 +19,7 @@ class CoursePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 PageBanner(
-                  ['assets/page_banner.jpeg'],
+                  ['assets/images/page_banner.jpeg'],
                   title: 'OUR CLASSES',
                   description: 'Yes, we are best known for our Chinese Language classes that are taught only by super-fluent, bilingual teachers.\nHowever, at Houston Dragon Academy, your child can be exposed to so much more.',
                   isRollingBanner: false,

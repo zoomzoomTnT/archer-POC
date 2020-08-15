@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          PageBanner(['assets/page_banner.jpeg']),
+          PageBanner(['assets/images/page_banner.jpeg']),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 100),
             child: ScreenTypeLayout(

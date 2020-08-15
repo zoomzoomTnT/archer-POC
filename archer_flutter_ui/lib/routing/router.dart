@@ -2,6 +2,7 @@ import 'package:archer_flutter_ui/view/about.dart';
 import 'package:archer_flutter_ui/view/campus.dart';
 import 'package:archer_flutter_ui/view/courses.dart';
 import 'package:archer_flutter_ui/view/home.dart';
+import 'package:archer_flutter_ui/view/signin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -15,6 +16,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(CampusPage(), settings.name);
     case 'courses':
       return _getPageRoute(CoursePage(), settings.name);
+    case 'signin':
+      return _getPageRoute(SigninPage(), settings.name);
     default:
   }
 }
