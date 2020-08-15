@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          PageBanner(['assets/page_banner.jpeg']),
+          PageBanner(['assets/images/page_banner.jpeg']),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 100),
             child: ScreenTypeLayout(
@@ -32,18 +32,18 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ]),
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'You have pushed the button this many times:',
-          ),
-          Text(
-            '$_counter',
-            style: Theme.of(context).textTheme.headline4,
-          )
-        ],
-      ),
+//      bottomNavigationBar: Row(
+//        mainAxisAlignment: MainAxisAlignment.center,
+//        children: <Widget>[
+//          Text(
+//            'You have pushed the button this many times:',
+//          ),
+//          Text(
+//            '$_counter',
+//            style: Theme.of(context).textTheme.headline4,
+//          )
+//        ],
+//      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _incrementCounter();

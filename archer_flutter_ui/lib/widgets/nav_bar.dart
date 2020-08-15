@@ -1,4 +1,3 @@
-import 'package:archer_flutter_ui/constants/constants.dart';
 import 'package:archer_flutter_ui/models/datamodel/navbar_item_model.dart';
 import 'package:archer_flutter_ui/services/navigation_service.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,7 @@ class _NavBarItem extends StatelessWidget {
   final String title;
   final String navigationPath;
   final IconData icon;
-  const _NavBarItem(this.title, this.navigationPath, {this.icon});
+  const _NavBarItem({this.title, this.navigationPath, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -103,15 +102,19 @@ class _NavigationBarTabletDesktop extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                _NavBarItem('Campus', 'campus'),//display, route
+                _NavBarItem(title: 'Campus', navigationPath: 'campus'),//display, route
                 SizedBox(
                   width: 60,
                 ),
-                _NavBarItem('About', 'about'),
+                _NavBarItem(title: 'About', navigationPath: 'about'),
                 SizedBox(
                   width: 60,
                 ),
-                _NavBarItem('Classes', 'courses'),
+                _NavBarItem(title: 'Classes', navigationPath: 'courses'),
+                SizedBox(
+                  width: 60,
+                ),
+                _NavBarItem(title: 'Login', navigationPath: 'signin'),
                 SizedBox(
                   width: 60,
                 ),

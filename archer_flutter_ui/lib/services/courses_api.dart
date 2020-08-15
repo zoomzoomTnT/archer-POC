@@ -25,84 +25,84 @@ class CoursesApi {
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Monday-Thursday;4:00-5:00PMy',
           displayCategory: 'After School',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       ),
       CourseItemModel(
           title: 'Mandarin-CSL',
           schedule: 'Saturday or Sunday',
           displayCategory: 'Weekend Classes',
           campus: 'online campus',
-          imageUrl: 'assets/course1.jpeg'
+          imageUrl: 'images/course1.jpeg'
       )
     ];
   }

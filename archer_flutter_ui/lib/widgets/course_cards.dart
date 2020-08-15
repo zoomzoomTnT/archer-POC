@@ -65,7 +65,7 @@ class CourseItem extends StatelessWidget {
                 ],
               ),
             ),
-            RaisedButton(
+            FlatButton(
               color: Colors.blue,
 
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
