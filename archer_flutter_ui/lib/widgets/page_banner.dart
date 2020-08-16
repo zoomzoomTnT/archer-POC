@@ -38,9 +38,11 @@ class _PageBannerState extends State<PageBanner> {
   @override
   void initState() {
     super.initState();
-    _curIndex = widget._images.length * 5;
+    _curIndex = widget._images.length;
     _pageController = PageController(initialPage: _curIndex);
-    _initTimer();
+    if(widget.isRollingBanner) {
+      _initTimer();
+    }
   }
 
   @override
@@ -49,7 +51,7 @@ class _PageBannerState extends State<PageBanner> {
       alignment: Alignment.bottomCenter,
       children: <Widget>[
         _buildPageView(),
-        _buildBannerIndicator(),
+        if(widget.isRollingBanner) _buildBannerIndicator(),
         _buildBannerText(),
       ],
     );
@@ -112,7 +114,6 @@ class _PageBannerState extends State<PageBanner> {
             style: titleTextStyle(DeviceScreenType.desktop),
           ),
           Container(
-            width: 1000,
             padding: EdgeInsets.symmetric(vertical: 15, horizontal: 100),
             margin: EdgeInsets.only(bottom: 16),
             child: Text(widget.description,
@@ -155,6 +156,7 @@ class _PageBannerState extends State<PageBanner> {
       height: widget.height,
       child: PageView.builder(
         controller: _pageController,
+        physics: widget.isRollingBanner ? null : NeverScrollableScrollPhysics(),
         onPageChanged: (index) {
           setState(() {
             _curIndex = index;
@@ -192,7 +194,9 @@ class _PageBannerState extends State<PageBanner> {
     if (_timer != null) {
       _timer.cancel();
       _timer = null;
-      _initTimer();
+      if(widget.isRollingBanner) {
+        _initTimer();
+      }
     }
   }
 
@@ -210,7 +214,7 @@ class _PageBannerState extends State<PageBanner> {
   }
 
   _changePage() {
-    Timer(Duration(milliseconds: 350), () {
+    Timer(Duration(milliseconds: 300), () {
       _pageController.jumpToPage(_curIndex);
     });
   }
