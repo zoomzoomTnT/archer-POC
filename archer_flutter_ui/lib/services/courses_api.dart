@@ -3,7 +3,9 @@ import 'package:archer_flutter_ui/models/datamodel/course_item_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:injectable/injectable.dart';
 
+@lazySingleton
 class CoursesApi {
   static const String _apiEndpoint =
       'https://us-central1-thebasics-2f123.cloudfunctions.net/thebasics';

@@ -21,15 +21,13 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final servicesRegistry = _$ServicesRegistry();
-  gh.lazySingleton<CoursesApi>(() => servicesRegistry.courseApi);
+  gh.lazySingleton<CoursesApi>(() => CoursesApi());
   gh.lazySingleton<DialogService>(() => servicesRegistry.dialogService);
   gh.lazySingleton<NavigationService>(() => servicesRegistry.navigationService);
   return get;
 }
 
 class _$ServicesRegistry extends ServicesRegistry {
-  @override
-  CoursesApi get courseApi => CoursesApi();
   @override
   DialogService get dialogService => DialogService();
   @override

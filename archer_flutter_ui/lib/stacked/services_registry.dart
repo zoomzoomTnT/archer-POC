@@ -10,7 +10,4 @@ abstract class ServicesRegistry {
 
   @lazySingleton
   DialogService get dialogService;
-
-  @lazySingleton
-  CoursesApi get courseApi;
 }
