@@ -1,8 +1,8 @@
 import 'package:archer_flutter_ui/models/datamodel/course_item_model.dart';
+import 'package:archer_flutter_ui/stacked/locator.dart';
 import 'package:archer_flutter_ui/services/courses_api.dart';
 import 'package:flutter/material.dart';
 
-import 'package:archer_flutter_ui/locator.dart';
 
 
 class CourseViewModel extends ChangeNotifier {

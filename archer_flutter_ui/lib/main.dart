@@ -1,7 +1,7 @@
+import 'package:archer_flutter_ui/stacked/locator.dart';
 import 'package:archer_flutter_ui/view/layout_template.dart';
 import 'package:flutter/material.dart';
 
-import 'locator.dart';
 
 void main() {
   setupLocator();
