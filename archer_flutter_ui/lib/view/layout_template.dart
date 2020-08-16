@@ -1,13 +1,13 @@
-import 'package:archer_flutter_ui/routing/router.dart';
-import 'package:archer_flutter_ui/services/navigation_service.dart';
+import 'package:archer_flutter_ui/stacked/locator.dart';
+import 'package:archer_flutter_ui/stacked/router.gr.dart';
 import 'package:archer_flutter_ui/widgets/footer_bar.dart';
 import 'package:archer_flutter_ui/widgets/nav_bar.dart';
 import 'package:archer_flutter_ui/widgets/nav_draw.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:stacked_services/stacked_services.dart';
 
-import '../locator.dart';
 
 class LayoutTemplate extends StatelessWidget {
   const LayoutTemplate({Key key}) : super(key: key);
@@ -28,8 +28,8 @@ class LayoutTemplate extends StatelessWidget {
                     constraints: BoxConstraints(maxHeight: 700),
                     child: Navigator(
                       key: locator<NavigationService>().navigatorKey,
-                      onGenerateRoute: generateRoute,
-                      initialRoute: 'home',
+                      onGenerateRoute: Router().onGenerateRoute,
+                      initialRoute: Routes.homePage,
                     ),
                   ),
                   FooterBar(),

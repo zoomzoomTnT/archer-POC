@@ -1,10 +1,11 @@
 import 'package:archer_flutter_ui/models/datamodel/navbar_item_model.dart';
-import 'package:archer_flutter_ui/services/navigation_service.dart';
+import 'package:archer_flutter_ui/stacked/locator.dart';
+import 'package:archer_flutter_ui/stacked/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:stacked_services/stacked_services.dart';
 
-import '../locator.dart';
 
 class NavigationBar extends StatelessWidget {
   const NavigationBar({Key key}) : super(key: key);
@@ -53,7 +54,7 @@ class _NavBarLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        locator<NavigationService>().goBack();
+        locator<NavigationService>().back();
       },
       child: SizedBox(
         height: 80,
@@ -102,19 +103,19 @@ class _NavigationBarTabletDesktop extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                _NavBarItem(title: 'Campus', navigationPath: 'campus'),//display, route
+                _NavBarItem(title: 'Campus', navigationPath: Routes.campusPage),
                 SizedBox(
                   width: 60,
                 ),
-                _NavBarItem(title: 'About', navigationPath: 'about'),
+                _NavBarItem(title: 'About', navigationPath: Routes.aboutPage),
                 SizedBox(
                   width: 60,
                 ),
-                _NavBarItem(title: 'Classes', navigationPath: 'courses'),
+                _NavBarItem(title: 'Classes', navigationPath: Routes.coursePage),
                 SizedBox(
                   width: 60,
                 ),
-                _NavBarItem(title: 'Login', navigationPath: 'signin'),
+                _NavBarItem(title: 'Login', navigationPath: Routes.signinPage),
                 SizedBox(
                   width: 60,
                 ),
