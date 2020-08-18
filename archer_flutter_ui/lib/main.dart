@@ -1,7 +1,7 @@
+import 'package:archer_flutter_ui/stacked/locator.dart';
 import 'package:archer_flutter_ui/view/layout_template.dart';
 import 'package:flutter/material.dart';
 
-import 'locator.dart';
 
 void main() {
   setupLocator();
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: LayoutTemplate(),

@@ -1,11 +1,11 @@
 import 'package:archer_flutter_ui/constants/constants.dart';
 import 'package:archer_flutter_ui/models/datamodel/navbar_item_model.dart';
-import 'package:archer_flutter_ui/services/navigation_service.dart';
-import 'package:flutter/material.dart';
+import 'package:archer_flutter_ui/stacked/locator.dart';
+import 'package:archer_flutter_ui/stacked/router.gr.dart';
 import 'package:flutter/material.dart';
 
-import 'package:archer_flutter_ui/locator.dart';
 import 'package:provider/provider.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
@@ -23,9 +23,9 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           _NavigationDrawerHeader(),
-          _DrawerItem(title: 'Campus', icon: Icons.house, navigationPath: 'campus'),
-          _DrawerItem(title: 'About', icon: Icons.help, navigationPath: 'about'),
-          _DrawerItem(title: 'Classes', icon: Icons.work, navigationPath: 'courses'),
+          _DrawerItem(title: 'Campus', icon: Icons.house, navigationPath: Routes.campusPage),
+          _DrawerItem(title: 'About', icon: Icons.help, navigationPath: Routes.aboutPage),
+          _DrawerItem(title: 'Classes', icon: Icons.work, navigationPath: Routes.coursePage),
         ],
       ),
     );
