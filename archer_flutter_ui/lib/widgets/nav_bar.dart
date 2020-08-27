@@ -5,19 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked_services/stacked_services.dart';
+import 'package:archer_flutter_ui/widgets/hover_extension.dart';
+
 
 
 class NavigationBar extends StatelessWidget {
   const NavigationBar({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: _NavigationBarMobile(),
       tablet: _NavigationBarTabletDesktop(),
-    );
+    ).showCursorOnHover;
   }
 }
+
+
 
 class _NavBarItem extends StatelessWidget {
   final String title;
@@ -115,9 +118,14 @@ class _NavigationBarTabletDesktop extends StatelessWidget {
                 SizedBox(
                   width: 60,
                 ),
+                _NavBarItem(title: "Parents", navigationPath: Routes.parentPage),
+                SizedBox(
+                  width: 60,
+                ),
                 _NavBarItem(title: 'Login', navigationPath: Routes.signinPage),
                 SizedBox(
                   width: 60,
+
                 ),
               ],
             )
