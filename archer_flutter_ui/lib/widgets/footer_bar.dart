@@ -1,8 +1,88 @@
+import 'dart:ui';
+
 import 'package:archer_flutter_ui/constants/styles.dart';
+import 'package:archer_flutter_ui/models/datamodel/navbar_item_model.dart';
+import 'package:archer_flutter_ui/stacked/locator.dart';
+import 'package:archer_flutter_ui/stacked/router.gr.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:footer/footer.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:stacked_services/stacked_services.dart';
+
+import 'package:archer_flutter_ui/widgets/hover_extension.dart';
+
+
+
+
+
+
+class _FooterBarItem extends StatelessWidget {
+  final String title;
+  final String navigationPath;
+  const _FooterBarItem({this.title, this.navigationPath});
+
+  @override
+  Widget build(BuildContext context) {
+    var model = NavBarItemModel(
+      title: title,
+      navigationPath: navigationPath,
+    );
+    return GestureDetector(
+        child: Provider.value(
+          value: model,
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 15),
+          ).showCursorOnHover,
+        ),
+        onTap: () {
+          locator<NavigationService>().navigateTo(navigationPath);
+        },
+    );
+  }
+}
+
+
+/*
+*
+* class _FooterBarItem extends StatelessWidget {
+  final String title;
+  final String navigationPath;
+  //final IconData icon;
+  const _FooterBarItem({this.title, this.navigationPath/*, this.icon*/});
+
+  @override
+  Widget build(BuildContext context) {
+    var model = NavBarItemModel(
+      title: title,
+      navigationPath: navigationPath,
+      //iconData: icon,
+    );
+    return GestureDetector(
+      onTap: () {
+        locator<NavigationService>().navigateTo(navigationPath);
+      },
+      child: Provider.value(
+        value: model,
+        child: Text(
+          title,
+          style: TextStyle(fontSize: 15),
+        ),
+      ),
+    );
+  }
+}
+*/
+
+
+
+
+
+
+
 
 class FooterBar extends StatelessWidget {
   @override
@@ -23,14 +103,18 @@ class FooterBar extends StatelessWidget {
                         children: [
                           Image.network('https://houstondragonacademy.org/img/logo/logo-white.png'),
                         ],),//icon
-                      Column(
-                        children: [
-                          Text('ABOUT'),
-                          Text('News'),
-                          Text('Calendar'),
-                          Text('Bussiness Hour'),
-                          Text('Career'),
-                        ],),
+                      Row(
+                        children: <Widget>[
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              _FooterBarItem(title: 'ABOUT', navigationPath: Routes.aboutPage),
+                              _FooterBarItem(title: 'News', navigationPath: Routes.aboutPage),
+                              _FooterBarItem(title: 'Calendar', navigationPath: Routes.calendarPage),
+                              _FooterBarItem(title: 'Business Hour', navigationPath: Routes.businessHourPage),
+                              _FooterBarItem(title: 'Career', navigationPath: Routes.careerPage),
+                            ],
+                        ),
                       Column(
                         children: [
                           Text('PROGRAMS'),
@@ -66,7 +150,9 @@ class FooterBar extends StatelessWidget {
                     ],
                   ),
                 ]),
+            ]
           ),
+          )
         );
   }
 }
