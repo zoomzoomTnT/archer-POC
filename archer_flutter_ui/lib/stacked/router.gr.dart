@@ -10,9 +10,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../view/about.dart';
+import '../view/businessHour.dart';
+import '../view/calendar.dart';
 import '../view/campus.dart';
+import '../view/career.dart';
 import '../view/courses.dart';
 import '../view/home.dart';
+import '../view/parents.dart';
 import '../view/signin.dart';
 
 class Routes {
@@ -20,13 +24,21 @@ class Routes {
   static const String campusPage = '/campus-page';
   static const String aboutPage = '/about-page';
   static const String coursePage = '/course-page';
+  static const String parentPage = '/parent-page';
   static const String signinPage = '/signin-page';
+  static const String calendarPage = '/calendar-page';
+  static const String careerPage = '/career-page';
+  static const String businessHourPage = '/business-hour-page';
   static const all = <String>{
     homePage,
     campusPage,
     aboutPage,
     coursePage,
+    parentPage,
     signinPage,
+    calendarPage,
+    careerPage,
+    businessHourPage,
   };
 }
 
@@ -38,7 +50,11 @@ class Router extends RouterBase {
     RouteDef(Routes.campusPage, page: CampusPage),
     RouteDef(Routes.aboutPage, page: AboutPage),
     RouteDef(Routes.coursePage, page: CoursePage),
+    RouteDef(Routes.parentPage, page: ParentPage),
     RouteDef(Routes.signinPage, page: SigninPage),
+    RouteDef(Routes.calendarPage, page: CalendarPage),
+    RouteDef(Routes.careerPage, page: CareerPage),
+    RouteDef(Routes.businessHourPage, page: BusinessHourPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -73,9 +89,33 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    ParentPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ParentPage(),
+        settings: data,
+      );
+    },
     SigninPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SigninPage(),
+        settings: data,
+      );
+    },
+    CalendarPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CalendarPage(),
+        settings: data,
+      );
+    },
+    CareerPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CareerPage(),
+        settings: data,
+      );
+    },
+    BusinessHourPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => BusinessHourPage(),
         settings: data,
       );
     },
