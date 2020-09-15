@@ -29,7 +29,7 @@ class LayoutTemplate extends StatelessWidget {
                     child: Navigator(
                       key: locator<NavigationService>().navigatorKey,
                       onGenerateRoute: router.Router().onGenerateRoute,
-                      initialRoute: router.Routes.aboutPage,
+                      initialRoute: router.Routes.homePage,
                     ),
                   ),
                   FooterBar(),
