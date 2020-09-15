@@ -23,7 +23,7 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           _NavigationDrawerHeader(),
-          _DrawerItem(title: 'Campus', icon: Icons.house, navigationPath: Routes.campusPage),
+          _DrawerItem(title: 'Campus', icon: Icons.mouse, navigationPath: Routes.campusPage),
           _DrawerItem(title: 'About', icon: Icons.help, navigationPath: Routes.aboutPage),
           _DrawerItem(title: 'Classes', icon: Icons.work, navigationPath: Routes.coursePage),
         ],

@@ -3,8 +3,6 @@ import 'package:archer_flutter_ui/widgets/gray_bar.dart';
 import 'package:archer_flutter_ui/widgets/page_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
-
 import 'package:url_launcher/url_launcher.dart';
 
 
