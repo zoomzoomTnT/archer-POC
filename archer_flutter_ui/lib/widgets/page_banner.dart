@@ -17,13 +17,13 @@ class PageBanner extends StatefulWidget {
 
   PageBanner(
       this._images, {
-        this.height = 380,
+        this.height = 500,
         this.onTap,
         this.curve = Curves.linear,
         this.title = '',
         this.description = '',
         this.isRollingBanner = true,
-        this.hasEnrollButton = false,
+        this.hasEnrollButton = true,
       }) : assert(_images != null);
 
   @override
@@ -61,13 +61,29 @@ class _PageBannerState extends State<PageBanner> {
     var bannerButton = List<Widget>();
     if (widget.hasEnrollButton) {
       bannerButton.add(
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 16),
+            child: Column(
+                children: <Widget>[
+                  Text(
+                      'BETTER CHINESE, MORE CHOICES!',
+                      style:TextStyle(fontSize: 40.0, fontFamily: 'Quicksand',color: Colors.white)
+                  ),
+                  Text(
+                      '\n-THE PERFECT SOLUTION TO YOUR AFTER SCHOOL DILEMMA-\n',
+                      style:TextStyle(fontSize: 14.0, fontFamily: 'Quicksand',color: Colors.white)
+                  ),
+                ]
+            )
+          ));
+      bannerButton.add(
           RaisedButton(
-            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 36),
-            color: Colors.blue[300],
+            padding: EdgeInsets.symmetric(vertical: 18, horizontal: 36),
+            color: Colors.blue[400],
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(36.0)),
             onPressed: () {},
             child: Text('ENROLL NOW',
-                style: descriptionTextStyle(DeviceScreenType.desktop),
+                style:TextStyle(fontSize: 14.0, fontFamily: 'Quicksand',color: Colors.white)
             ),
           )
       );
@@ -80,10 +96,11 @@ class _PageBannerState extends State<PageBanner> {
               children: [
                 TextSpan(
                   text: 'Enrollment Tutorial: ',
+                    style:TextStyle(fontSize: 16.0, fontFamily: 'Quicksand')
                 ),
                 TextSpan(
                   text: 'Onsite',
-                  style: TextStyle(decoration: TextDecoration.underline),
+                  style: TextStyle(decoration: TextDecoration.underline,fontSize: 16.0, fontFamily: 'Quicksand'),
                   recognizer: new TapGestureRecognizer()
                     ..onTap = () {
                     },
@@ -93,7 +110,7 @@ class _PageBannerState extends State<PageBanner> {
                 ),
                 TextSpan(
                   text: 'Online',
-                  style: TextStyle(decoration: TextDecoration.underline),
+                  style: TextStyle(decoration: TextDecoration.underline,fontSize: 16.0, fontFamily: 'Quicksand'),
                   recognizer: new TapGestureRecognizer()
                     ..onTap = () {
                     },
